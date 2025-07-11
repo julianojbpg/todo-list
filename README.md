@@ -19,3 +19,6 @@ instala o prisma
 
 validação com yup
 ### npm i yup
+
+para criar rotina de trabalho
+### npm install --save @nestjs/schedule

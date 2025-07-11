@@ -77,4 +77,15 @@ export class DatabaseTask {
             return { status: false, messagem: 'Nenhuma tarefa foi deletada', value: error }
         }
     }
+
+    async clearTask(): Promise <IResult> {
+        try {
+            const {count} = await prisma.task.deleteMany({ where: { estado:true } })
+            if(count > 0)
+                return { status: true, messagem: 'As Tarefas finalizadas foram deletadas' }
+            return { status: true, messagem: 'todas as tarefas estão pendentes' }
+        } catch (error) {
+            return { status: false, messagem: 'Nenhuma tarefa foi deletada', value: error }
+        }
+    }
 }
