@@ -22,3 +22,14 @@ validação com yup
 
 para criar rotina de trabalho
 ### npm install --save @nestjs/schedule
+
+
+Rotas da task
+### @Controller('/tarefa')
+### @Get('/buscarTodasAsTarefas')
+### @Get('/buscarTarefaPorId/:id')
+### @Post('/cadastrarTarefa')
+### @Patch('/atualizarTarefa')
+### @Patch('/finalizarTarefa/:id')
+### @Delete('/deletarTarefa/:id')
+ 

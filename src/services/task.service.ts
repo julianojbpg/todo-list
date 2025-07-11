@@ -45,7 +45,7 @@ export class TaskService {
     if (value == null)
       return { status: false, messagem: 'task não encontrada' }
       if(!status)
-        return { status: false, messagem: 'o estado é falso'}
+        return { status: false, messagem: 'o estado é pendente'}
     const result = await this.database.finishTask(id, status)
     return result
   }
